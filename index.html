@@ -11,27 +11,74 @@
    <section class="start-section">
     <button class="btn-start" data-start>Start Quiz</button>
   </section>
-    <!-- Quiz Section -->
-    <section class="quiz-section hidden">
-      <div class="quiz-header">
-        <div class="timer" data-timer>Time: 15</div>
-        <div class="question-number" data-question-number>Question 1 of 5</div>
-      </div>
-      <div class="question-container">
-        <h2 class="question" data-question>Question text goes here</h2>
-        <ul class="answers" data-answers>
 
-          <!-- Answer options will be dynamically inserted here -->
-        </ul>
-      </div>
-      <button class="btn-next hidden" data-next>Next Question</button>
-    </section>
+  <!-- Quiz Section -->
+  <section class="quiz-section hidden" data-quiz>
+  <div class="quiz-box">
 
-    <!-- Result Section -->
-    <section class="result-section hidden">
-      <h2>Your Score: <span data-score>0</span>/5</h2>
-      <button class="btn-restart" data-restart>Restart Quiz</button>
-    </section>
+    <!-- Header -->
+    <header class="quiz-header" data-header>
+      <h1 class="quiz-title" data-title>Quiz App</h1>
+
+      <!-- Timer -->
+      <div class="timer" data-timer>
+        <span class="timer-text" data-timer-text>Time Remaining</span>
+        <span class="timer-count" data-timer-count>10</span>
+      </div>
+    </header>
+
+    <!-- Time Line -->
+    <div class="time-line" data-timeline>
+      <div class="time-progress" data-time-progress></div>
+    </div>
+
+    <!-- 2.3 Question & Options -->
+    <div class="question-section" data-question-section>
+
+      <!-- Question -->
+      <div class="question-text" data-question></div>
+
+      <!-- Options -->
+      <div class="options" data-options>
+        <button class="option" data-option="a"></button>
+        <button class="option" data-option="b"></button>
+        <button class="option" data-option="c"></button>
+        <button class="option" data-option="d"></button>
+      </div>
+
+    </div>
+
+    <!-- 2.4 Question Number -->
+    <div class="question-footer"> 
+      <div class="question-number" data-question-number>
+        1 / 7
+      </div>
+
+      <!-- 2.5 Next Button -->
+      <div class="next-section">
+        <button class="btn-next" data-next>Next Question</button>
+      </div>
+    </div>
+
+  </div>
+  </section>
+
+  <!-- Score Section -->
+  <section class="score-section hidden" data-score>
+  <div class="score-box">
+
+    <div class="score-header">
+      <span class="score-icon" data-score-icon>🏁</span>
+      <span class="score-text" data-score-text>You got X / 7 correct</span>
+    </div>
+
+    <div class="score-buttons">
+      <button class="replay-btn" data-replay>Replay</button>
+      <button class="quit-btn" data-quit>Quit</button>
+    </div>
+  </div>
+  </section>
+
 
     <!-- <script src="script.js"></script> -->
 </body>
