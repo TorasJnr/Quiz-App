@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Start Section -->
-  <section>
-    <button>Start Quiz</button>
+   <section class="start-section">
+    <button class="btn-start" data-start>Start Quiz</button>
   </section>
+    <!-- Quiz Section -->
+    <section class="quiz-section hidden">
+      <div class="quiz-header">
+        <div class="timer" data-timer>Time: 15</div>
+        <div class="question-number" data-question-number>Question 1 of 5</div>
+      </div>
+      <div class="question-container">
+        <h2 class="question" data-question>Question text goes here</h2>
+        <ul class="answers" data-answers>
+          <!-- Answer options will be dynamically inserted here -->
+        </ul>
+      </div>
+      <button class="btn-next hidden" data-next>Next Question</button>
+    </section>
+
+    <!-- Result Section -->
+    <section class="result-section hidden">
+      <h2>Your Score: <span data-score>0</span>/5</h2>
+      <button class="btn-restart" data-restart>Restart Quiz</button>
+    </section>
+
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>
